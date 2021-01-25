@@ -20,26 +20,18 @@ void draw() {
   
   endShape();
   
-  beginShape();
-  
-  for (float theta = 0; theta <= 20 * PI; theta += 0.01) {
-    float x = 30*cos(theta/3 + t)/(sin(theta)+1.2) + height/2;
-    float y = 30*(abs(cos(theta)) + sin(theta)) + width/2;
-    vertex(x, y);
+  for (float i = 0; i <= PI; i += PI) {
+    beginShape();
+    
+    for (float theta = 0; theta <= 20 * PI; theta += 0.01) {
+      float x = 30*cos((theta-i)/3 + t)/(sin(theta)+1.2) + height/2;
+      float y = 30*(abs(cos(theta)) + sin(theta)) + width/2;
+      vertex(x, y);
+    }
+    fill(255,120,80);
+    
+    endShape();
   }
-  fill(255,120,80);
-  
-  endShape();
-  
-  beginShape();
-  
-  for (float theta = 0; theta <= 20 * PI; theta += 0.01) {
-    float x = 30*cos((theta-PI)/3 + t)/(sin(theta)+1.2) + height/2;
-    float y = 30*(abs(cos(theta)) + sin(theta)) + width/2;
-    vertex(x, y);
-  }
-  
-  endShape();
   
   t += 0.03;
 }
