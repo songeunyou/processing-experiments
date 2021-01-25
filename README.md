@@ -1,2 +1,2 @@
 # processing-experiments
-Experimenting with generative code using Processing
+Experimenting with generative art using Processing
